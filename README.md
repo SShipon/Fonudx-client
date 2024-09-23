@@ -1,8 +1,6 @@
-# Next.js & NextUI Template
+# Foundx 
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
-
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
+[Try it on CodeSandbox](https://github.com/SShipon/Fonudx-client)
 
 ## Technologies Used
 
@@ -21,7 +19,7 @@ This is a template for creating applications using Next.js 14 (app directory) an
 To create a new project based on this template using `create-next-app`, run the following command:
 
 ```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
+npx create-next-app -e https://github.com/SShipon/Fonudx-client
 ```
 
 ### Install dependencies
