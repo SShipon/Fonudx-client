@@ -2,10 +2,14 @@ import React from 'react'
 import Container from '../../UI/Container'
 import { Button } from '@nextui-org/button'
 import Link from 'next/link'
+import { getRecentPosts } from '@/src/services/RecentPosts'
+import Card from '../../UI/Card'
+
 
 export default async function RecentPosts() {
-  
-  const res = await fetch("")
+  const {data:posts} = await getRecentPosts()
+  console.log(posts,"this is hello")
+
   return (
       <Container>
               <div className='section-title my-8'>
@@ -13,7 +17,9 @@ export default async function RecentPosts() {
                     <p className='text-center'>A list of items that have been recently found and reported</p>
               </div>
               <div className='my-8 grid justify-center gap-10 sm:grid-cols-1 md:grid-cols-4'>
-                   <h2>Recent Posts</h2>
+                  {
+                    posts?.map((post)=> <Card key={post._id} post={post}></Card>)
+                  }
               </div>
               <div className='flex justify-center'>
                  <Button className='rounded-md bg-default-900 text-default '>
