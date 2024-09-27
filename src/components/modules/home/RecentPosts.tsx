@@ -4,6 +4,7 @@ import { Button } from '@nextui-org/button'
 import Link from 'next/link'
 import { getRecentPosts } from '@/src/services/RecentPosts'
 import Card from '../../UI/Card'
+import { IPost } from '@/src/types'
 
 
 export default async function RecentPosts() {
@@ -18,7 +19,7 @@ export default async function RecentPosts() {
               </div>
               <div className='my-8 grid justify-center gap-10 sm:grid-cols-1 md:grid-cols-4'>
                   {
-                    posts?.map((post)=> <Card key={post._id} post={post}></Card>)
+                    posts?.map((post:IPost)=> <Card key={post._id} post={post}></Card>)
                   }
               </div>
               <div className='flex justify-center'>
